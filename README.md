@@ -36,4 +36,4 @@ Simulation of the Phase 3 and 4 SPI driver.
 
 Phase 4 result: The ball moves based on the tilt angle of the board.
 
-<img align="center" src="Photos/VGA_Demo.png" width="800" alt="Bare Frame 1">
+<img align="center" src="Photos/VGA_Demo.png" width="800" alt="VGA">

@@ -1,0 +1,17 @@
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module hdmi_demo_blue_test.i_hdmi_demo_blue.char_atlas.inst.\native_mem_module.blk_mem_gen_v8_4_6_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 4 ns  Iteration: 3  Process: /hdmi_demo_blue_test/i_hdmi_demo_blue/i_hdmi_drv/i_rgb2dvi/\DataEncoders(0)\/DataEncoder/line__154  File: C:/Users/andre/Documents/IMPORTANT/FotoNation_HDMI_TextEditor/FotoNation_HDMI_TextEditor.srcs/sources_1/imports/hdmi_blue/hdmi_drv/TMDS_Encoder.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 4 ns  Iteration: 3  Process: /hdmi_demo_blue_test/i_hdmi_demo_blue/i_hdmi_drv/i_rgb2dvi/\DataEncoders(1)\/DataEncoder/line__154  File: C:/Users/andre/Documents/IMPORTANT/FotoNation_HDMI_TextEditor/FotoNation_HDMI_TextEditor.srcs/sources_1/imports/hdmi_blue/hdmi_drv/TMDS_Encoder.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 4 ns  Iteration: 3  Process: /hdmi_demo_blue_test/i_hdmi_demo_blue/i_hdmi_drv/i_rgb2dvi/\DataEncoders(2)\/DataEncoder/line__154  File: C:/Users/andre/Documents/IMPORTANT/FotoNation_HDMI_TextEditor/FotoNation_HDMI_TextEditor.srcs/sources_1/imports/hdmi_blue/hdmi_drv/TMDS_Encoder.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 4249466 ps  Iteration: 2  Process: /hdmi_demo_blue_test/i_hdmi_demo_blue/i_hdmi_drv/i_rgb2dvi/\DataEncoders(0)\/DataEncoder/line__154  File: C:/Users/andre/Documents/IMPORTANT/FotoNation_HDMI_TextEditor/FotoNation_HDMI_TextEditor.srcs/sources_1/imports/hdmi_blue/hdmi_drv/TMDS_Encoder.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 4249466 ps  Iteration: 2  Process: /hdmi_demo_blue_test/i_hdmi_demo_blue/i_hdmi_drv/i_rgb2dvi/\DataEncoders(1)\/DataEncoder/line__154  File: C:/Users/andre/Documents/IMPORTANT/FotoNation_HDMI_TextEditor/FotoNation_HDMI_TextEditor.srcs/sources_1/imports/hdmi_blue/hdmi_drv/TMDS_Encoder.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 4249466 ps  Iteration: 2  Process: /hdmi_demo_blue_test/i_hdmi_demo_blue/i_hdmi_drv/i_rgb2dvi/\DataEncoders(2)\/DataEncoder/line__154  File: C:/Users/andre/Documents/IMPORTANT/FotoNation_HDMI_TextEditor/FotoNation_HDMI_TextEditor.srcs/sources_1/imports/hdmi_blue/hdmi_drv/TMDS_Encoder.vhd
+INFO: xsimkernel Simulation Memory Usage: 25460 KB (Peak: 25460 KB), Simulation CPU Usage: 62906 ms

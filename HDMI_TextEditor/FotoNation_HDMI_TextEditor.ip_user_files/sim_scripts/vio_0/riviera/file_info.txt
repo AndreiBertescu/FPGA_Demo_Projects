@@ -1,0 +1,5 @@
+xpm_cdc.sv,systemverilog,xpm,D:/Apps/Vivado/2023.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv,incdir="../../../../FotoNation_HDMI_TextEditor.gen/sources_1/ip/vio_0/hdl/verilog"incdir="../../../../FotoNation_HDMI_TextEditor.gen/sources_1/ip/vio_0/hdl"
+xpm_memory.sv,systemverilog,xpm,D:/Apps/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv,incdir="../../../../FotoNation_HDMI_TextEditor.gen/sources_1/ip/vio_0/hdl/verilog"incdir="../../../../FotoNation_HDMI_TextEditor.gen/sources_1/ip/vio_0/hdl"
+xpm_VCOMP.vhd,vhdl,xpm,D:/Apps/Vivado/2023.1/data/ip/xpm/xpm_VCOMP.vhd,incdir="../../../../FotoNation_HDMI_TextEditor.gen/sources_1/ip/vio_0/hdl/verilog"incdir="../../../../FotoNation_HDMI_TextEditor.gen/sources_1/ip/vio_0/hdl"
+vio_0.v,verilog,xil_defaultlib,../../../../FotoNation_HDMI_TextEditor.gen/sources_1/ip/vio_0/sim/vio_0.v,incdir="../../../../FotoNation_HDMI_TextEditor.gen/sources_1/ip/vio_0/hdl/verilog"incdir="../../../../FotoNation_HDMI_TextEditor.gen/sources_1/ip/vio_0/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v
