@@ -1,0 +1,62 @@
+`timescale 1ns / 1ns
+
+module hex_handler(
+	input       	clk,
+	input     		reset,
+	input     		slow_clk,
+	
+	output [7:0]	HEX0,
+	output [7:0]	HEX1,
+	output [7:0]	HEX2,
+	output [7:0]	HEX3,
+	output [7:0]	HEX4,
+	output [7:0]	HEX5
+);
+
+	localparam 			 TP 	 	 = 1;
+	localparam [8-1 : 0] HEX_BALL_LO = 8'b10100011;
+	localparam [8-1 : 0] HEX_BALL_HI = 8'b10011100;
+
+	reg [6-1 : 0] 	counter;
+	reg				direction;
+	reg				reached_end;
+	
+	
+	// 6-bit shift register
+	always @(posedge clk or posedge reset) begin
+		if(reset)
+			counter <= 6'b1;
+		else if(slow_clk & (~reached_end))
+			counter <= direction ? (counter >> 1) : (counter << 1);
+	end
+	
+	// direction register
+	always @(posedge clk or posedge reset) begin
+		if(reset)
+			direction <= 0;
+		else if(slow_clk & (counter == 6'b100000))
+			direction <= 1;
+		else if(slow_clk & (counter == 6'b000001))
+			direction <= 0;
+	end
+	
+	// reached_end register - to stall the counter one clock cycle
+	always @(posedge clk or posedge reset) begin
+		if(reset)
+			reached_end <= 0;
+		else if(slow_clk & reached_end)
+			reached_end <= 0;
+		else if(slow_clk & ((direction & counter == 6'b000010) | (~direction & counter == 6'b010000)))
+			reached_end <= 1;
+	end
+	
+	
+	// 7-segment displays pattern generator
+	assign HEX0 = (counter[0]) ? (direction ? HEX_BALL_HI : HEX_BALL_LO) : {8{1'b1}};
+	assign HEX1 = (counter[1]) ? (direction ? HEX_BALL_HI : HEX_BALL_LO) : {8{1'b1}};
+	assign HEX2 = (counter[2]) ? (direction ? HEX_BALL_HI : HEX_BALL_LO) : {8{1'b1}};
+	assign HEX3 = (counter[3]) ? (direction ? HEX_BALL_HI : HEX_BALL_LO) : {8{1'b1}};
+	assign HEX4 = (counter[4]) ? (direction ? HEX_BALL_HI : HEX_BALL_LO) : {8{1'b1}};
+	assign HEX5 = (counter[5]) ? (direction ? HEX_BALL_HI : HEX_BALL_LO) : {8{1'b1}};
+
+endmodule

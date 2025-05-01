@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at vga_driver.v(21): object "H_VISIBLE" differs only in case from object "h_visible" in the same scope File: C:/Users/andre/Documents/IMPORTANT/FACULTATE/AN III/Proiect_HDL/proiect/DE10L_vga_display/vga_driver.v Line: 21
+Info (10281): Verilog HDL Declaration information at vga_driver.v(26): object "V_VISIBLE" differs only in case from object "v_visible" in the same scope File: C:/Users/andre/Documents/IMPORTANT/FACULTATE/AN III/Proiect_HDL/proiect/DE10L_vga_display/vga_driver.v Line: 26

@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu May  1 21:54:27 2025
+# Process ID: 19440
+# Current directory: C:/Users/andre/Documents/IMPORTANT/FACULTATE/AN III/Proiect_HDL/proiect/test_SPI_Vivado/SPI_sim
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10840 C:\Users\andre\Documents\IMPORTANT\FACULTATE\AN III\Proiect_HDL\proiect\test_SPI_Vivado\SPI_sim\SPI_sim.xpr
+# Log file: C:/Users/andre/Documents/IMPORTANT/FACULTATE/AN III/Proiect_HDL/proiect/test_SPI_Vivado/SPI_sim/vivado.log
+# Journal file: C:/Users/andre/Documents/IMPORTANT/FACULTATE/AN III/Proiect_HDL/proiect/test_SPI_Vivado/SPI_sim\vivado.jou
+# Running On        :LAPTOP-ANDREIB
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :Intel(R) Core(TM) i5-8300H CPU @ 2.30GHz
+# CPU Frequency     :2304 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :17063 MB
+# Swap memory       :1533 MB
+# Total Virtual     :18597 MB
+# Available Virtual :7091 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/andre/Documents/IMPORTANT/FACULTATE/AN III/Proiect_HDL/proiect/test_SPI_Vivado/SPI_sim/SPI_sim.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source spi_block_V2_tb.tcl
+open_wave_config {C:/Users/andre/Documents/IMPORTANT/FACULTATE/AN III/Proiect_HDL/proiect/test_SPI_Vivado/SPI_sim/spi_block_V2_tb_behav.wcfg}
+close_sim

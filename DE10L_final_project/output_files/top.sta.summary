@@ -1,0 +1,137 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk_wiz_0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -3.886
+TNS   : -178.828
+
+Type  : Slow 1200mV 85C Model Setup 'spi_wrapper:spi_wrapper_inst|spi_block_V2:spi_block_inst|clock_divider:clock_divider_0|clk_o'
+Slack : -2.666
+TNS   : -39.685
+
+Type  : Slow 1200mV 85C Model Hold 'spi_wrapper:spi_wrapper_inst|spi_block_V2:spi_block_inst|clock_divider:clock_divider_0|clk_o'
+Slack : 0.325
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_wiz_0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.419
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'spi_wrapper:spi_wrapper_inst|spi_block_V2:spi_block_inst|clock_divider:clock_divider_0|clk_o'
+Slack : -2.278
+TNS   : -60.216
+
+Type  : Slow 1200mV 85C Model Recovery 'clk_wiz_0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 34.575
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'spi_wrapper:spi_wrapper_inst|spi_block_V2:spi_block_inst|clock_divider:clock_divider_0|clk_o'
+Slack : 2.153
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clk_wiz_0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 5.024
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'spi_wrapper:spi_wrapper_inst|spi_block_V2:spi_block_inst|clock_divider:clock_divider_0|clk_o'
+Slack : -1.222
+TNS   : -34.216
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : 9.777
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_wiz_0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.755
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk_wiz_0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -3.022
+TNS   : -125.003
+
+Type  : Slow 1200mV 0C Model Setup 'spi_wrapper:spi_wrapper_inst|spi_block_V2:spi_block_inst|clock_divider:clock_divider_0|clk_o'
+Slack : -2.665
+TNS   : -38.173
+
+Type  : Slow 1200mV 0C Model Hold 'spi_wrapper:spi_wrapper_inst|spi_block_V2:spi_block_inst|clock_divider:clock_divider_0|clk_o'
+Slack : 0.295
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_wiz_0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.346
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'spi_wrapper:spi_wrapper_inst|spi_block_V2:spi_block_inst|clock_divider:clock_divider_0|clk_o'
+Slack : -2.565
+TNS   : -67.939
+
+Type  : Slow 1200mV 0C Model Recovery 'clk_wiz_0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 35.020
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'spi_wrapper:spi_wrapper_inst|spi_block_V2:spi_block_inst|clock_divider:clock_divider_0|clk_o'
+Slack : 2.408
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clk_wiz_0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.531
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'spi_wrapper:spi_wrapper_inst|spi_block_V2:spi_block_inst|clock_divider:clock_divider_0|clk_o'
+Slack : -1.222
+TNS   : -34.216
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : 9.784
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_wiz_0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.712
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk_wiz_0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -1.664
+TNS   : -54.804
+
+Type  : Fast 1200mV 0C Model Setup 'spi_wrapper:spi_wrapper_inst|spi_block_V2:spi_block_inst|clock_divider:clock_divider_0|clk_o'
+Slack : -1.101
+TNS   : -12.658
+
+Type  : Fast 1200mV 0C Model Hold 'spi_wrapper:spi_wrapper_inst|spi_block_V2:spi_block_inst|clock_divider:clock_divider_0|clk_o'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_wiz_0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.207
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'spi_wrapper:spi_wrapper_inst|spi_block_V2:spi_block_inst|clock_divider:clock_divider_0|clk_o'
+Slack : -1.127
+TNS   : -27.995
+
+Type  : Fast 1200mV 0C Model Recovery 'clk_wiz_0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 37.090
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'spi_wrapper:spi_wrapper_inst|spi_block_V2:spi_block_inst|clock_divider:clock_divider_0|clk_o'
+Slack : 1.099
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clk_wiz_0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 2.541
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'spi_wrapper:spi_wrapper_inst|spi_block_V2:spi_block_inst|clock_divider:clock_divider_0|clk_o'
+Slack : -1.000
+TNS   : -28.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : 9.530
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_wiz_0|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 19.769
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,94 @@
+module hex_wrapper #(
+	parameter IN_FREQ = 50_000_000
+)(
+	input					clk,
+	input					reset_i,
+	input					SW,
+		
+	output reg [7 : 0] 		HEX0,
+	output reg [7 : 0] 		HEX1,
+	output reg [7 : 0] 		HEX2,
+	output reg [7 : 0] 		HEX3,
+	output reg [7 : 0] 		HEX4,
+	output reg [7 : 0] 		HEX5,
+	
+	input signed [16-1 : 0] datax_i,
+	input signed [16-1 : 0] datay_i
+);
+
+	localparam [8-1 : 0] HEX_BALL_LO = 8'b10100011;
+	localparam [8-1 : 0] HEX_BALL_HI = 8'b10011100;
+
+	wire 			slow_clk;
+	reg [6-1 : 0] 	counter;
+	reg				direction;
+	reg				reached_end;
+	
+	
+	// Clock divider to create a 1Hz signal
+    clock_divider #(
+        .FREQ_IN    (IN_FREQ	),
+        .FREQ_OUT   (1		    ),
+        .MAKE_PULSE (1          )
+    ) clock_divider_0 (
+        .clk        (clk        ),
+        .reset_i    (reset_i    ),
+        .clk_o      (slow_clk   )
+    );
+	
+	
+	// 6-bit shift register
+	always @(posedge clk or posedge reset_i) begin
+		if(reset_i)
+			counter <= 6'b1;
+		else if(slow_clk & (~reached_end))
+			counter <= direction ? (counter >> 1) : (counter << 1);
+	end
+	
+	// direction register
+	always @(posedge clk or posedge reset_i) begin
+		if(reset_i)
+			direction <= 0;
+		else if(slow_clk & (counter == 6'b100000))
+			direction <= 1;
+		else if(slow_clk & (counter == 6'b000001))
+			direction <= 0;
+	end
+	
+	// reached_end register - to stall the counter one clock cycle
+	always @(posedge clk or posedge reset_i) begin
+		if(reset_i)
+			reached_end <= 0;
+		else if(slow_clk & reached_end)
+			reached_end <= 0;
+		else if(slow_clk & ((direction & counter == 6'b000010) | (~direction & counter == 6'b010000)))
+			reached_end <= 1;
+	end
+	
+
+	always @(posedge clk or posedge reset_i) begin
+		if(reset_i) begin
+			HEX0 <= {8{1'b1}};
+			HEX1 <= {8{1'b1}};
+			HEX2 <= {8{1'b1}};
+			HEX3 <= {8{1'b1}};
+			HEX4 <= {8{1'b1}};
+			HEX5 <= {8{1'b1}};
+		end else if(SW) begin
+			HEX0 <= (counter[0]) ? (direction ? HEX_BALL_HI : HEX_BALL_LO) : {8{1'b1}};
+			HEX1 <= (counter[1]) ? (direction ? HEX_BALL_HI : HEX_BALL_LO) : {8{1'b1}};
+			HEX2 <= (counter[2]) ? (direction ? HEX_BALL_HI : HEX_BALL_LO) : {8{1'b1}};
+			HEX3 <= (counter[3]) ? (direction ? HEX_BALL_HI : HEX_BALL_LO) : {8{1'b1}};
+			HEX4 <= (counter[4]) ? (direction ? HEX_BALL_HI : HEX_BALL_LO) : {8{1'b1}};
+			HEX5 <= (counter[5]) ? (direction ? HEX_BALL_HI : HEX_BALL_LO) : {8{1'b1}};
+		end else begin
+			HEX0 = (datax_i <= -180					) ? ((datay_i > 0) ? HEX_BALL_LO : HEX_BALL_HI) : 8'hff;
+		    HEX1 = (datax_i > -180 & datax_i <= -80	) ? ((datay_i > 0) ? HEX_BALL_LO : HEX_BALL_HI) : 8'hff;
+		    HEX2 = (datax_i > -80 & datax_i <= 0	) ? ((datay_i > 0) ? HEX_BALL_LO : HEX_BALL_HI) : 8'hff;
+		    HEX3 = (datax_i > 0   & datax_i <= 80 	) ? ((datay_i > 0) ? HEX_BALL_LO : HEX_BALL_HI) : 8'hff;
+		    HEX4 = (datax_i > 80  & datax_i <= 180 	) ? ((datay_i > 0) ? HEX_BALL_LO : HEX_BALL_HI) : 8'hff;
+		    HEX5 = (datax_i > 180				 	) ? ((datay_i > 0) ? HEX_BALL_LO : HEX_BALL_HI) : 8'hff;
+		end
+	end
+	
+endmodule
