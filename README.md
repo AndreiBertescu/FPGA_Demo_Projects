@@ -19,7 +19,7 @@ In this project, we successfully communicated with the accelerometer sensor and 
 ### 3. DE10L_spi_comm
 A more advanced SPI project. I developed a robust, state-machine-based SPI driver that works at any clock speed and decouples the system from the SPI frequency. It translates the SPI interface into a FIFO-based input/output system and offers bulk read/write capabilities. This driver is used to retrieve the X and Y orientation in degrees from the accelerometer and map them to the 7-segment displays. A square moves around on the displays based on board inclination, similar to a digital spirit level.
 
-### 4. DE10L_spi_comm
+### 4. DE10L_spi_comm_V2
 A more simple SPI approach, using a simple sequencer based approach. It stores a series of 'instructions' in a memory, which it iterates through to execute the requested SPI commands.
 
 ### 5. DE10L_vga_display
