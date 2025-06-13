@@ -1,0 +1,60 @@
+module spi_sequencer #(
+	parameter TP = 1
+)(
+    input        clk_i,
+    input        reset_i,
+	input 		 enable_i,
+
+    // Req-ack interface
+	output        req_o,			
+    output        is_read_op,  	
+    output  [5:0] addr_o,		
+    output  [7:0] wr_data_o,		
+	
+    input    	  ack_i,			
+    input [7:0]   rd_data_i,
+	
+	output reg [7:0] data_X_o,
+	output reg [7:0] data_Y_o
+);
+
+	// Program ROM
+	localparam logic [16:0] PRG_MEM [0:17] = '{
+		{1'b1, 8'h00, 8'bx},
+		{1'b1, 8'h32, 8'bx},
+		{1'b1, 8'h34, 8'bx}
+	};
+	
+	reg[4-1 : 0] prg_counter;
+	
+	// Map instruction to values
+	assign req_o 		= enable_i;
+	assign is_read_op   = PRG_MEM[prg_counter][16];
+	assign addr_o 		= PRG_MEM[prg_counter][15:8];
+	assign wr_data_o 	= PRG_MEM[prg_counter][7:0];
+	
+	
+	// Program counter
+	always @(posedge clk_i or posedge reset_i) begin
+		if(reset_i)
+			prg_counter <= 'b0;
+		else if(ack_i & (prg_counter == 'd2))
+			prg_counter <= 'd1;
+		else if(ack_i)
+			prg_counter <= prg_counter + 1;
+	end
+	
+	
+	// Map spi output to propper values
+	always @(posedge clk_i or posedge reset_i) begin
+		if(reset_i) begin
+			data_X_o <= 'b0;
+			data_Y_o <= 'b0;
+		end else if(ack_i) begin
+			data_X_o <= (prg_counter == 1) ? rd_data_i : data_X_o;
+			data_Y_o <= (prg_counter == 2) ? rd_data_i : data_Y_o;
+		end
+	end
+
+endmodule
+

@@ -1,0 +1,40 @@
+module spi_sequencer #(
+	parameter TP = 1
+)(
+    input        reset_i,
+    input        clk_i,
+	input 		 enable_i,
+
+    // Req-ack interface
+	output        req_o,			
+    output        is_read_op,  	
+    output  [5:0] addr_o,		
+    output  [7:0] wr_data_o,		
+	
+    input    	  ack_i,			
+    input [7:0]   rd_data_i,
+	
+	output reg [7:0] data_o
+);
+
+	reg key_d;
+
+// button delay
+	always @(posedge clk) begin
+		key_d <= enable_i;
+	end
+	
+	assign req_o = ~key_d & enable_i;
+	assign is_read_op = 1;
+	assign addr_o = 0;
+	assign wr_data_o = 0;
+	
+	always @(posedge clk or negedge reset_i) begin
+		if(reset_i)
+			data_o <= 'b0;
+		else if(ack_i)
+			data_o <= rd_data_i;
+	end
+
+endmodule
+
