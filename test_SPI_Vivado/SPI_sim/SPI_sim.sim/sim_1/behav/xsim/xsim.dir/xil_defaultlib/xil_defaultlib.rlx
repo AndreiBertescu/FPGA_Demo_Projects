@@ -1,9 +1,0 @@
-0.7
-2020.2
-May 22 2024
-19:03:11
-C:/Users/andre/Documents/IMPORTANT/FACULTATE/AN III/Proiect_HDL/proiect/test_SPI_Vivado/SPI_sim/SPI_sim.sim/sim_1/behav/xsim/glbl.v,1708598508,verilog,,,,glbl,,,,,,,,
-C:/Users/andre/Documents/IMPORTANT/FACULTATE/AN III/Proiect_HDL/proiect/test_SPI_Vivado/SPI_sim/SPI_sim.srcs/sources_1/new/clock_divider.v,1740321410,verilog,,C:/Users/andre/Documents/IMPORTANT/FACULTATE/AN III/Proiect_HDL/proiect/test_SPI_Vivado/SPI_sim/SPI_sim.srcs/sources_1/new/fifo.v,,clock_divider,,,,,,,,
-C:/Users/andre/Documents/IMPORTANT/FACULTATE/AN III/Proiect_HDL/proiect/test_SPI_Vivado/SPI_sim/SPI_sim.srcs/sources_1/new/fifo.v,1740321398,verilog,,C:/Users/andre/Documents/IMPORTANT/FACULTATE/AN III/Proiect_HDL/proiect/test_SPI_Vivado/spi_block_V2_multiple_bytes.v,,fifo,,,,,,,,
-C:/Users/andre/Documents/IMPORTANT/FACULTATE/AN III/Proiect_HDL/proiect/test_SPI_Vivado/spi_block_V2_multiple_bytes.v,1740486083,verilog,,C:/Users/andre/Documents/IMPORTANT/FACULTATE/AN III/Proiect_HDL/proiect/test_SPI_Vivado/spi_block_V2_tb.v,,spi_block_V2,,,,,,,,
-C:/Users/andre/Documents/IMPORTANT/FACULTATE/AN III/Proiect_HDL/proiect/test_SPI_Vivado/spi_block_V2_tb.v,1741633221,verilog,,,,spi_block_V2_tb,,,,,,,,
